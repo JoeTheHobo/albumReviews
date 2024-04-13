@@ -1,0 +1,352 @@
+ body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    
+    background:rgb(219, 184, 124);
+}
+#topBar {
+    position: fixed;
+    top: 0px;
+    height: 75px;
+    width: 100%;
+    background: #414141;
+    display: flex;
+    align-items: center;
+    z-index: 500;
+    justify-content: center;
+}
+#statisticPage {
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 888;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: auto;
+    width: 80%;
+    height: max-content;
+    padding: 20px;
+    background: #918e9f;
+    display: none;
+}
+.statTitle {
+    font-size: 35px;
+    margin-top: 20px;
+    color: #ddd;
+}
+.statGroup {
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+.statClose {
+    margin-top: 20px;
+    font-size: 20px; 
+    text-decoration: underline;
+}
+
+
+
+#accendingIcon {
+    
+}
+#search {
+    width: 70%;
+    height: 35px;
+    border-radius: 10px;
+    background: gray;
+    display: flex;
+
+    margin-right: 10px;
+}
+.searchInput {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    max-width: 80%;
+    background: none;
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+} 
+.accendingIcon {
+    transform: scaleY(-1);
+}
+.topBarIcon {
+    width: 35px;
+    height: 35px;
+    transition: all .2s;
+}
+
+#add {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    background: rgb(233, 92, 92);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+}
+#download {
+    position: absolute;
+    right: 15px;
+    bottom: 90px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    background: rgb(233, 92, 92);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+}
+#paste {
+    position: absolute;
+    right: 15px;
+    bottom: 165px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    background: rgb(233, 92, 92);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+}
+
+
+
+
+#addScreen {
+    display: none;
+    position: absolute;
+    z-index: 501;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #414141;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+#deleteReview {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 25px;
+}
+#exitAddScreen {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 25px;
+}
+.asTitle {
+    margin-top: 35px;
+    font-size: 25px;
+    font-weight: bold;
+}  
+.asGroup {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+.asgTitle {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.asgInput {
+    outline: none;
+    height: 35px;
+    width: 80%;
+    font-size: 20px;
+}
+.asgTextArea {
+    width: 80%;
+    font-size: 18px;
+    height: 200px;
+    outline: none;
+    
+}
+.asgRating {
+    width: 40px !important;
+    text-align: center;
+}
+.fillGap {
+    flex-grow: 1;
+}
+#finish {
+    margin-top: 25px;
+    width: 100%;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: rgb(106, 92, 233);
+}
+
+
+#warning {
+    width: 95%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(13, 13, 13);
+    display: none;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
+    z-index: 502;
+    bottom: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#searchBy {
+
+    margin-top: 85px;
+    width: 100%;
+    background:rgb(219, 184, 124);
+    text-align: center;
+    color: white;
+    height: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.searchType {
+    text-decoration: underline;
+    color: rgb(72, 72, 72);
+}
+#artistBody {
+    display: none;
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:rgb(219, 184, 124);
+}
+#body {
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:rgb(219, 184, 124);
+}
+.albumReview { 
+    display: none;
+    margin-top: 20px;
+    height: 60px;
+    width: 100%;
+    padding: 25px;
+
+}
+.albumHolder {
+    width: 90%;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: white;
+    position: relative;
+    height: max-content;
+    min-height: 80px;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.albumName {
+    position: absolute;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    top: 10px;
+    left: 10px; 
+}
+.albumArtist {
+
+    text-decoration: underline;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.albumRating {
+
+    font-size: 25px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.albumEdit {
+    width: 25px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.marginLeft {
+    margin-left: 10px;
+}
+.hamburger {
+    position: fixed;
+    display: none;
+    border-radius: 15px;
+    background: #515151;
+    width: 200px;
+    height: max-content;
+    padding: 10px;
+    right: 10px;
+    top: 60px;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.hambrugerLine {
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.bottomBorder {
+    padding-bottom: 10px;
+    border-bottom:  1px solid white;;
+}
+
+#goToTop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 30px;
+    border-radius: 50px;
+    background: #414141aa;
+    width: 35px;
+    padding: 5px;
+    display: none;
+    transform: rotate(90deg);
+}

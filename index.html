@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="topBar">
+        <div id="search">
+            <input class="searchInput" type="text">
+            <img onclick="focusSearch()" class="topBarIcon" src="img/search.png" alt="">
+        </div>
+        <img onclick="toggleAccending()" id="accendingIcon" class="topBarIcon" src="img/accending.png">
+        <img onclick="toggleHamburger()" id="dontHide" src="img/bars.png" class="topBarIcon marginLeft" alt="">
+
+    </div>
+    <div id="dontHide" class="hamburger">
+        <div id="dontHide" class="hambrugerLine bottomBorder stats"  onclick="statisticPage()">Statistics</div>
+        <div id="dontHide" class="hambrugerLine bottomBorder"  onclick="exportArtists()">Hard Save</div>
+        <div id="dontHide" class="hambrugerLine"  onclick="importArtist()">Hard Load</div> 
+    </div>
+    <div id="searchBy">Searching By <span class="searchType">Albums</span></div>
+    <div id="body"></div>
+    <div id="add" onclick="showAddScreen()">+</div>
+
+    <div id="statisticPage">
+        <div class="statTitle">Albums</div>
+        <div class="statGroup">Total Albums: <span id="statTotalAlbums"></span></div>
+        <div class="statGroup">Average Rating: <span id="statAlbumRating"></span></div>
+        <div class="statTitle">Artists</div>
+        <div class="statGroup">Total Artists: <span id="statTotalArtist"></span></div>
+        <div class="statGroup">Average Rating: <span id="statArtistRating"></span></div>
+
+        <div class="statClose">Touch Anywhere To Close</div>
+    </div>
+
+    <div id="addScreen">
+        <img id="exitAddScreen" onclick="closeAddScreen()" src="img/delselect.png">
+        <img id="deleteReview" onclick="deleteReview()" src="img/delete.png">
+        <div class="asTitle">Create A New Review!</div>
+        <div class="asGroup">
+            <div class="asgTitle">Artist Name (Kanye West, Kid Cudi)</div>
+            <input class="asgInput" id="artistNameInput" type="text">
+        </div>
+        <div class="asGroup">
+            <div class="asgTitle">Album Name</div>
+            <input class="asgInput" id="albumNameInput" type="text">
+        </div>
+        <div class="asGroup">
+            <div class="asgTitle">Review</div>
+            <textarea id='reviewText' class="asgTextArea"></textarea>
+        </div>
+        <div class="asGroup fillGap">
+            <div class="asgTitle">Rating (0.0-10)</div>
+            <input id='ratingInput' maxlength="3" class="asgInput asgRating" type="number">
+        </div>
+
+        <div id="finish" onclick="reviewAdd()">Finish</div>
+    </div>
+
+    <img id="goToTop" src="img/back.png" alt="">
+
+    <div id="warning"></div>
+    
+    <script src="library_simple_v14.js"></script>
+    <script src="localStorage.js"></script>
+    <script src="main.js"></script>
+
+
+    <script src="FANTANO/rawReviews.js"></script>
+    <script src="FANTANO/decodeRaw.js"></script>
+</body>
+</html>
